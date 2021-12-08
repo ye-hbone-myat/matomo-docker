@@ -93,6 +93,6 @@ You will able to see cronjob which you just added. You can exit from docker cont
 1. Go to **System>General Setting**
 2. Select **No** and **save**.
 
-Now, cronjob should be working!
+Now, cronjob should be working! Thanks!
 
 
