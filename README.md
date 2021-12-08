@@ -22,6 +22,11 @@ docker ps
 ```
 
 Note: After docker containers are up and running, check your server ip address with port 8080 in browser. (For example: http://serverip:8080)
+Set up Database and Super User Account
+-------------------------------------
+1. Go to http://serverip:8080
+2. Follow the steps according to Matomo UI
+3. Create Super User Account
 
 Note: Matomo configuration doesn't allow port 8080 for trusted device, so let's fix this.
 
