@@ -21,4 +21,4 @@ Check docker containers
 docker ps 
 ```
 
-Note: After docker containers are up and running, check your server ip address in browser.
+Note: After docker containers are up and running, check your server ip address with port 8080 in browser. (For example: http://serverip:8080)
