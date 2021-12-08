@@ -65,7 +65,7 @@ docker exec -it matomo-docker_app_1 /bin/ash
 ```
 **Step 3 : Check the output**
 ```console
-cat matomo-archive.log
+cat /root/matomo-archive.log
 ```
 If the archiving command is working, now can add the cronjob.
 
@@ -93,6 +93,6 @@ You will able to see cronjob which you just added. You can exit from docker cont
 1. Go to **System>General Setting**
 2. Select **No** and **save**.
 
-Now, cronjob should be working! Thanks!
+Now, the cronjob should be working! Thanks!
 
 
