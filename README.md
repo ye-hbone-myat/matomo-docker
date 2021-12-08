@@ -3,6 +3,7 @@
 Clone file to your server
 ------------------------
 ```console
+git clone https://github.com/ye-hbone-myat/matomo-docker.git
 ```
 Go to the Matomo folder
 ----------------------
