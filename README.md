@@ -74,7 +74,15 @@ Type esc and type wq!(To save and quit vi)
 ```console
 crontab -l
 ```
-You will able to see cronjob which you just added. You can exit from docker container now. Cronjob should be working.
+You will able to see cronjob which you just added. You can exit from docker container now. 
 
+**Step 5 : Disable browser triggers for Matomo archiving**
+
+![alter text](https://github.com/ye-hbone-myat/matomo-docker/blob/01407f7e3b44633a94a2df9b94a7cc5e1dbc6f5d/images/Screen%20Shot%202021-12-08%20at%207.34.36%20PM.png)
+
+1. Go to **System>General Setting**
+2. Select **No** and **save**.
+
+Now, cronjob should be working!
 
 
