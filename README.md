@@ -59,24 +59,34 @@ Set up cron for archiving reports
 ```console
 docker exec -it matomo-docker_app_1 /bin/ash
 ```
-**Step 2 : Open Cron Editor**
+**Step 2 : Run the following archiving command manually**
+```console
+/usr/local/bin/php /var/www/html/console core:archive --url=http://serverip:8080 > /root/matomo-archive.log
+```
+**Step 3 : Check the output**
+```console
+cat matomo-archive.log
+```
+If the archiving command is working, now can add the cronjob.
+
+**Step 4 : Open Cron Editor**
 ```console
 crontab -e
 ```
-**Step 3 : Add the follow commands to the cron**
+**Step 5 : Add the follow commands to the cron**
 ```console
 MAILTO="youremail@gmail.com"
 5 * * * * /usr/local/bin/php /var/www/html/console core:archive --url=http://serverip:8080 > /root/matomo-archive.log  
 ```
 Type esc and type wq!(To save and quit vi)
 
-**Step 4 : Check cronjob**
+**Step 6 : Check cronjob**
 ```console
 crontab -l
 ```
 You will able to see cronjob which you just added. You can exit from docker container now. 
 
-**Step 5 : Disable browser triggers for Matomo archiving**
+**Step 7 : Disable browser triggers for Matomo archiving**
 
 ![alter text](https://github.com/ye-hbone-myat/matomo-docker/blob/01407f7e3b44633a94a2df9b94a7cc5e1dbc6f5d/images/Screen%20Shot%202021-12-08%20at%207.34.36%20PM.png)
 
