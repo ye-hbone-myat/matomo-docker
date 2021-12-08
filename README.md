@@ -65,7 +65,7 @@ crontab -e
 ```
 **Step 3 : Add the follow commands to the cron**
 ```console
-MAILTO="yehbonemyat2016@gmail.com"
+MAILTO="youremail@gmail.com"
 5 * * * * /usr/local/bin/php /var/www/html/console core:archive --url=http://serverip:8080 > /root/matomo-archive.log  
 ```
 Type esc and type wq!(To save and quit vi)
