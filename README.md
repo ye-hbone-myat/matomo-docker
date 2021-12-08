@@ -53,3 +53,28 @@ docker exec -it matomo-docker_app_1 cat config/config.ini.php | grep trusted_hos
 ```
 5. Go to the url http://serverip:8080 (Now it should be working)
 
+Set up cron for archiving reports
+---------------------------------
+**Step 1 : Enter to matomo app docker container**
+```console
+docker exec -it matomo-docker_app_1 /bin/ash
+```
+**Step 2 : Open Cron Editor**
+```console
+crontab -e
+```
+**Step 3 : Add the follow commands to the cron**
+```console
+MAILTO="yehbonemyat2016@gmail.com"
+5 * * * * /usr/local/bin/php /var/www/html/console core:archive --url=http://serverip:8080 > /root/matomo-archive.log  
+```
+Type esc and type wq!(To save and quit vi)
+
+**Step 4 : Check cronjob**
+```console
+crontab -l
+```
+You will able to see cronjob which you just added. You can exit from docker container now. Cronjob should be working.
+
+
+
